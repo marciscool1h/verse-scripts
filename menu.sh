@@ -43,7 +43,7 @@ echo -e "${GREEN}After that, type in console ${YELLOW}sudo systemctl enable puff
 echo -e "${GREEN}To add user, open goTTY and enter ${YELLOW}pufferpanel user add${GREEN} and follow the instructions"
 echo -e "${GREEN}Script will turn on goTTY now${NC}"
 echo "Enter your server port:"; read
-gotty -w -p --once $REPLY bash
+gotty -w --once -p $REPLY bash
 ;;
 2)
 apt remove pufferpanel
