@@ -19,6 +19,19 @@ echo -e "${GREEN}[2] ${RED}Exit"
 echo "Enter your choise [1/2] "; read 
 case $REPLY in
 1)
+echo -e "${GREEN}#####################################"
+echo -e "${GREEN}"
+echo -e "${GREEN}           PufferPanel script"
+echo -e "${GREEN}         Running on $os $version"
+echo -e "${GREEN}"
+echo -e "${GREEN}#####################################"
+echo -e ""
+echo -e "${GREEN}[1] ${YELLOW}Install PufferPanel"
+echo -e "${YELLOW}[1] ${YELLOW}Remove PufferPanel"
+echo -e "${GREEN}[3] ${RED}Exit"
+echo "Enter your choise [1/2/3] "; read 
+case $REPLY in
+1)
 apt-get install sudo
 wget -qO gotty.tar.gz https://github.com/yudai/gotty/releases/latest/download/gotty_linux_amd64.tar.gz
 sudo tar xf gotty.tar.gz -C /usr/local/bin
@@ -30,6 +43,17 @@ echo -e "${GREEN}To add user, open goTTY and enter ${YELLOW}pufferpanel user add
 echo -e "${GREEN}Script will turn on goTTY now${NC}"
 echo "Enter your server port:"; read
 gotty -w -p --once $REPLY bash
+;;
+2)
+apt remove pufferpanel
+rm -r /var/lib/pufferpanel
+rm -r /etc/pufferpanel
+echo "All PufferPanel files have been removed!"
+;;
+3)
+echo "Exiting..."
+exit
+esac
 ;;
 2) 
 echo "Exiting..."
