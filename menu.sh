@@ -6,7 +6,7 @@ PURPLE='\033[1;35m'
 os=$(lsb_release -is)
 version=$(lsb_release -rs)
 
-
+clear
 echo -e "${GREEN}#####################################"
 echo -e "${GREEN}"
 echo -e "${GREEN}           Verse Scripts Menu"
@@ -19,6 +19,7 @@ echo -e "${GREEN}[2] ${RED}Exit"
 echo "Enter your choise [1/2] "; read 
 case $REPLY in
 1)
+clear
 echo -e "${GREEN}#####################################"
 echo -e "${GREEN}"
 echo -e "${GREEN}           PufferPanel script"
