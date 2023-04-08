@@ -28,7 +28,7 @@ echo -e "${GREEN}"
 echo -e "${GREEN}#####################################"
 echo -e ""
 echo -e "${GREEN}[1] ${YELLOW}Install PufferPanel"
-echo -e "${YELLOW}[2] ${YELLOW}Remove PufferPanel"
+echo -e "${GREEN}[2] ${YELLOW}Remove PufferPanel"
 echo -e "${GREEN}[3] ${RED}Exit"
 echo "Enter your choise [1/2/3] "; read 
 case $REPLY in
