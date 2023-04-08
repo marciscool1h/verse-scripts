@@ -14,9 +14,10 @@ echo -e "${GREEN}         Running on $os $version"
 echo -e "${GREEN}"
 echo -e "${GREEN}#####################################"
 echo -e ""
-echo -e "${GREEN}[1] ${YELLOW}Install PufferPanel"
-echo -e "${GREEN}[2] ${RED}Exit"
-echo "Enter your choise [1/2] "; read 
+echo -e "${GREEN}[1] Install PufferPanel"
+echo -e "${GREEN}[2] Install Pterodactyl Panel"
+echo -e "${GREEN}[3] Exit"
+echo "Enter your choise [1/2/3] "; read 
 case $REPLY in
 1)
 clear
@@ -27,9 +28,9 @@ echo -e "${GREEN}         Running on $os $version"
 echo -e "${GREEN}"
 echo -e "${GREEN}#####################################"
 echo -e ""
-echo -e "${GREEN}[1] ${YELLOW}Install PufferPanel"
-echo -e "${GREEN}[2] ${YELLOW}Remove PufferPanel"
-echo -e "${GREEN}[3] ${RED}Exit"
+echo -e "${GREEN}[1] Install PufferPanel"
+echo -e "${GREEN}[2] Remove PufferPanel"
+echo -e "${GREEN}[3] Exit"
 echo "Enter your choise [1/2/3] "; read 
 case $REPLY in
 1)
@@ -57,6 +58,9 @@ exit
 esac
 ;;
 2) 
+bash <(curl -s https://pterodactyl-installer.se)
+;;
+3) 
 echo "Exiting..."
 exit
 ;; 
